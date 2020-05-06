@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+        <link rel="Stylesheet" type="text/css" href="../../css/style.css">
+        <title>TCP</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <a href="../../index.html">Index</a>
+            <hr>
+
+            <div class="content">
+            
+<div id="TCP PROTOCOL"><h1 id="TCP PROTOCOL" class="header"><a href="#TCP PROTOCOL">TCP PROTOCOL</a></h1></div>
+<hr />
+
+<p>
+<span id="TCP PROTOCOL-3x handshake"></span><strong id="3x handshake">3x handshake</strong> 
+</p>
+
+<p>
+<span id="TCP PROTOCOL-MTU"></span><strong id="MTU">MTU</strong> - Maximum transmition unit. For Ethernet and PPP = 1500 byte.
+<span id="TCP PROTOCOL-MSS"></span><strong id="MSS">MSS</strong> - Maximum segment size. Without header, only segment data.
+</p>
+
+<p>
+TCP/IP length ~ 40 byte
+Telnet = 1 byte
+</p>
+
+
+<div id="TCP PROTOCOL-Comunucation Process"><h3 id="Comunucation Process" class="header"><a href="#TCP PROTOCOL-Comunucation Process">Comunucation Process</a></h3></div>
+<p>
+<span id="TCP PROTOCOL-Comunucation Process-TCP segments"></span><strong id="TCP segments">TCP segments</strong> = TCP-headers + Data
+</p>
+
+<pre>
+
+     Proccess                                     Proccess
+        ||                                           /\
+        \/                                           ||
+     (Socket)                                     (Socket)
+        ||                                           /\  
+        \/       [segment]--&gt;  [segment]--&gt;          ||     
+   [TCP-buffer] ------------------------------- [TCP-buffer] 
+   
+</pre>
+
+<div id="TCP PROTOCOL-Structure of TCP-segment"><h3 id="Structure of TCP-segment" class="header"><a href="#TCP PROTOCOL-Structure of TCP-segment">Structure of TCP-segment</a></h3></div>
+<p>
+<span class="todo">TODO</span>
+TCP-header = 20 byte
+</p>
+
+
+<div id="TCP PROTOCOL-Calculation Time send/recieve"><h3 id="Calculation Time send/recieve" class="header"><a href="#TCP PROTOCOL-Calculation Time send/recieve">Calculation Time send/recieve</a></h3></div>
+
+<p>
+EstimatedRTT = (1 - alfa) * EstimatedRTT + alfa * SampleRTT
+alfa = 0.125 = 1/8
+DevRTT = (1 - beta) * DevRTT + beta * | SampleRTT = EstimatedRTT |
+beta = 0.25
+</p>
+
+<p>
+TimeoutInterval = EstimatedRTT + 4 * DevRTT
+</p>
+
+
+<div id="TCP PROTOCOL-Flow control"><h3 id="Flow control" class="header"><a href="#TCP PROTOCOL-Flow control">Flow control</a></h3></div>
+
+            </div>
+        </div>
+
+        
+    </body>
+</html>

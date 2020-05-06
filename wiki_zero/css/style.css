@@ -1,45 +1,3 @@
-#header_tab {
-    background-color: #161917;
-    padding: 0px;
-    border: none;
-    margin: 0px;
-}
-
-#th_tab {
-    padding: 0;
-    background-color: #161917;
-    padding-top: 50px;
-    padding-left: 50px;
-    border: none;
-    margin: 0px;
-}
-#th_tab:hover {
-    padding: 0;
-    background-color: #161917;
-    padding-top: 50px;
-    padding-left: 50px;
-    border: none;
-    margin: 0px;
-}
-
-#img_menu:hover {
-    background-color: #808080;
-}
-
-
-nav{
-    border-bottom: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: ;
-    border-top: solid;
-    border-top-width: 1px;
-    border-top-color: ;
-    padding-left: 30%;
-}
-
-hr {
-    color: #575b5f;
-}
 .wrapper {
     box-sizing: border-box;
     clear: both;
@@ -51,62 +9,47 @@ hr {
     width: 666px;
 
 }
-header {
-    background-color: #161917;
-    text-align: center;
-    font-size: 25px;
-    padding: 10px;
-    color: #b61f24;
-}
-
-a {
-    color: #b61f24;
-}
-
-.nav_text {
-    color: #b61f24;
-}
-.nav_text:hover {
-    color: #0000;
-    background-color: #b61f24;
-}
 
 body {
-    font-family: "Cambria","Georgia","Times New Roman", serif; 
+    font-family: Tahoma, Geneva, sans-serif; 
     margin: 1em 2em 1em 2em; 
     font-size: 100%; 
-    line-height: 130%;
-    background-color: #161917;
-    color: #dee5e5;
-    min-width: 600px;
+    line-height: 130%; 
+    background-color: #000; 
+    color:#F8F8FF; 
 }
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Cambria","Georgia","Times New Roman", serif; 
+    font-family: Trebuchet MS, Helvetica, sans-serif; 
     font-weight: bold; 
     line-height:100%; 
     margin-top: 1.5em; 
     margin-bottom: 0.5em;
 }
-h1 {font-size: 2.6em; color: #a6aaac;}
-h2 {font-size: 2.2em; color: #898e91;}
-h3 {font-size: 1.8em; color: #6d7275;}
-h4 {font-size: 1.4em; color: #575b5f;}
-h5 {font-size: 1.3em; color: #7f1012;}
-h6 {font-size: 1.2em; color: #68090b;}
+
+h1 {font-size: 2.6em; color: #2EC4B6;}
+h2 {font-size: 2.2em; color: #209181;}
+h3 {font-size: 1.8em; color: #176F5E;}
+h4 {font-size: 1.4em; color: #0E4C3B;}
+h5 {font-size: 1.3em; color: #989898;}
+h6 {font-size: 1.2em; color: #9c9c9c;}
 p, pre, blockquote, table, ul, ol, dl {margin-top: 1em; margin-bottom: 1em;}
 ul ul, ul ol, ol ol, ol ul {margin-top: 0.5em; margin-bottom: 0.5em;}
 li {margin: 0.3em auto;}
 ul {margin-left: 2em; padding-left: 0.5em;}
 dt {font-weight: bold;}
 img {border: none;}
-pre {border-left: none; margin-left: none; padding-left: 0.5em;}
+pre {border-left: 1px solid #ccc; margin-left: 2em; padding-left: 0.5em;}
 blockquote {padding: 0.4em; background-color: #f6f5eb;}
 th, td {border: 1px solid #ccc; padding: 0.3em;}
-th {background-color: #f0f0f0;}
+th {background-color: #4c5b5c;}
 hr {border: none; border-top: 1px solid #ccc; width: 100%;}
 del {text-decoration: line-through; color: #777777;}
+a {color: #016FB9;}
+a:hover{ background-color: #4C5B5C; text-decoration: underline;}
+
 .toc li {list-style-type: none;}
-.todo {font-weight: bold; background-color: #f0ece8; color: #a03020;}
+.todo {font-weight: bold; background-color: #000; color: #0f0;}
 .justleft {text-align: left;}
 .justright {text-align: right;}
 .justcenter {text-align: center;}

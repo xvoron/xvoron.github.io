@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+        <link rel="Stylesheet" type="text/css" href="../css/style.css">
+        <title>0x2</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <a href="../index.html">Index</a>
+            <hr>
+
+            <div class="content">
+            
+<div id="Contents" class="toc"><h1 id="Contents">Contents</a></h1></div>
+<ul>
+<li>
+<a href="0x2.html#Programs">Programs</a>
+
+<li>
+<a href="0x2.html#x86">x86</a>
+
+<li>
+<a href="0x2.html#Assembler">Assembler</a>
+
+<li>
+<a href="0x2.html#Memory segmentation">Memory segmentation</a>
+
+</ul>
+
+<div id="Programs"><h3 id="Programs" class="header"><a href="#Programs">Programs</a></h3></div>
+<ol>
+<li>
+tcpdump
+
+<li>
+gcc - GNU C compiler    
+<pre>
+    -g - bonus information for gdb $gcc -g program.c
+    -o [name] - rename file after compilation.
+</pre>
+
+<li>
+<span id="Programs-objdump"></span><strong id="objdump">objdump</strong> - program for binary cod examination.
+<pre>
+    -M [intel] - for intel syntax
+</pre>
+
+</ol>
+    
+<ol>
+<li>
+<span id="Programs-gdb"></span><strong id="gdb">gdb</strong> - debugger for C. 
+<pre>
+    syntax intel set: $echo "set disassembly-flavor intel" &gt; ~/.gdbinit
+    -q - ?
+    -g - bonus information for gdb
+    Interaction: 
+        (gdb) break main
+        (gdb) run
+        (gdb) info regusters
+        (gdb) info reguster &lt;register&gt; | i r &lt;register&gt;
+        (gdb) quit
+        (gdb) list
+        (gdb) disassembly main
+        (gbd) print
+        (gbd) nexti
+        (gbd) runt test
+        (gbd) where
+    Examine:
+        (gdb) x/o 0x5555....
+        (gdb) x/x $rip | x/x, x/o, x/u, x/t
+        (gdb) x/12o $rsi 
+        (gdb) x/i $rip | instruction
+        (gdb) x/c $rip | char
+        (gdb) x/s $rip | string
+    bt: backtrace. Examine stack. Every record in bt listing is stack frame. 
+        (gdb) bt
+        (gdb) bt full | local variables
+    
+    (gdb) operation &lt;destination&gt;, &lt;source&gt;
+</pre>
+
+</ol>
+
+
+<div id="x86"><h3 id="x86" class="header"><a href="#x86">x86</a></h3></div>
+
+<p>
+<span id="x86-Little-endian byte order"></span><strong id="Little-endian byte order">Little-endian byte order</strong> - first little byte.
+</p>
+
+<table>
+<tr>
+<th>
+registers
+</th>
+<th>
+addres
+</th>
+<th>
+definition
+</th>
+<th>
+notes
+</th>
+</tr>
+<tr>
+<td>
+rax
+</td>
+<td>
+0x555555555149
+</td>
+<td>
+Accumulator
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+rbx
+</td>
+<td>
+0x0
+</td>
+<td>
+Base
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+rcx
+</td>
+<td>
+0x555555555180
+</td>
+<td>
+Counter
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+rdx
+</td>
+<td>
+0x7fffffffdf38
+</td>
+<td>
+Data
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+rsi
+</td>
+<td>
+0x7fffffffdf28
+</td>
+<td>
+Source Index
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+rdi
+</td>
+<td>
+0x1
+</td>
+<td>
+Destination Index
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+rbp
+</td>
+<td>
+0x555555555180
+</td>
+<td>
+Base Pointer
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+rsp
+</td>
+<td>
+0x7fffffffde48
+</td>
+<td>
+Stack Pointer
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+r8
+</td>
+<td>
+0x0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+r9
+</td>
+<td>
+0x7ffff7fe11f0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+r10
+</td>
+<td>
+0xb
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+r11
+</td>
+<td>
+0x2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+r12
+</td>
+<td>
+0x555555555060
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+r13
+</td>
+<td>
+0x7fffffffdf20
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+r14
+</td>
+<td>
+0x0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+r15
+</td>
+<td>
+0x0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+rip
+</td>
+<td>
+0x555555555149
+</td>
+<td>
+Instruction Pointer
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+eflags
+</td>
+<td>
+0x246
+</td>
+<td>
+Flag register
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+cs
+</td>
+<td>
+0x33
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ss
+</td>
+<td>
+0x2b
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ds
+</td>
+<td>
+0x0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+es
+</td>
+<td>
+0x0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+fs
+</td>
+<td>
+0x0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+gs
+</td>
+<td>
+0x0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+
+
+<div id="Assembler"><h3 id="Assembler" class="header"><a href="#Assembler">Assembler</a></h3></div>
+
+<p>
+operation &lt;destination&gt;, &lt;source&gt;
+</p>
+
+<table>
+<tr>
+<th>
+operation/command
+</th>
+<th>
+description
+</th>
+</tr>
+<tr>
+<td>
+mov
+</td>
+<td>
+Move
+</td>
+</tr>
+<tr>
+<td>
+sub
+</td>
+<td>
+subtract
+</td>
+</tr>
+<tr>
+<td>
+inc
+</td>
+<td>
+increment
+</td>
+</tr>
+<tr>
+<td>
+cmp
+</td>
+<td>
+compare
+</td>
+</tr>
+<tr>
+<td>
+j*
+</td>
+<td>
+jump
+</td>
+</tr>
+<tr>
+<td>
+jle
+</td>
+<td>
+<em>jump</em> if <em>less</em> than or <em>equal</em> to
+</td>
+</tr>
+<tr>
+<td>
+lea
+</td>
+<td>
+load effective address
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td>
+b
+</td>
+<td>
+-
+</td>
+<td>
+1 byte
+</td>
+</tr>
+<tr>
+<td>
+h
+</td>
+<td>
+halfword
+</td>
+<td>
+2 byte
+</td>
+</tr>
+<tr>
+<td>
+w
+</td>
+<td>
+word
+</td>
+<td>
+4 byte
+</td>
+</tr>
+<tr>
+<td>
+g
+</td>
+<td>
+giant word
+</td>
+<td>
+8 byte
+</td>
+</tr>
+</table>
+
+<p>
+! DWORD -&gt; double word -&gt; 4 byte !
+! short -&gt; halfword -&gt; 2 byte !
+</p>
+
+
+<div id="Memory segmentation"><h3 id="Memory segmentation" class="header"><a href="#Memory segmentation">Memory segmentation</a></h3></div>
+<p>
+IN NOTEBOOK
+</p>
+
+            </div>
+        </div>
+
+        
+    </body>
+</html>
