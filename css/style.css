@@ -24,8 +24,7 @@ nav{
     border-top: solid;
     border-top-width: 1px;
     border-top-color: ;
-    
-
+    padding-left: 30%;
 }
 
 hr {
@@ -53,6 +52,15 @@ header {
 a {
     color: #b61f24;
 }
+
+.nav_text {
+    color: #b61f24;
+}
+.nav_text:hover {
+    color: #0000;
+    background-color: #b61f24;
+}
+
 body {
     font-family: "Cambria","Georgia","Times New Roman", serif; 
     margin: 1em 2em 1em 2em; 
