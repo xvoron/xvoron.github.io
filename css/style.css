@@ -1,87 +1,105 @@
-#header_tab {
-    background-color: #161917;
-    padding: 0px;
-    border: none;
-    margin: 0px;
-}
-
-#th_tab {
+* {
+    margin: 0;
     padding: 0;
-    background-color: #161917;
-    padding-top: 50px;
-    padding-left: 50px;
-    border: none;
-    margin: 0px;
-}
-#th_tab:hover {
-    padding: 0;
-    background-color: #161917;
-    padding-top: 50px;
-    padding-left: 50px;
-    border: none;
-    margin: 0px;
 }
 
-#img_menu:hover {
-    background-color: #808080;
+#page {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    height: 560px;
 }
 
-
-nav{
-    border-bottom: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: ;
-    border-top: solid;
-    border-top-width: 1px;
-    border-top-color: ;
-    padding-left: 30%;
+html {
+    height: 100%;
 }
 
-hr {
-    color: #575b5f;
-}
-.wrapper {
-    box-sizing: border-box;
-    clear: both;
-    line-height: 28px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 40px;
-    padding-right: 40px;
-    width: 666px;
-
-}
 header {
-    background-color: #161917;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 58%;
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#header_content {
     text-align: center;
-    font-size: 25px;
-    padding: 10px;
-    color: #b61f24;
+}
+
+#header_logo {
+    text-align: center;
 }
 
 a {
     color: #b61f24;
 }
 
-.nav_text {
-    color: #b61f24;
-}
-.nav_text:hover {
-    color: #0000;
-    background-color: #b61f24;
+#content {
+    position: absolute;
+    left: 50%;
+    width: 50%;
 }
 
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    height: 30px;
+}
+
+@media only screen and (max-width: 578px) {
+    header {
+        position: static;
+        top: 10px;
+        padding-bottom: 16px;
+        margin: 40px 24px 16px;
+        width: auto;
+    }
+    #header_content #logo {
+        top: -33px;
+    }
+    #header_content h1, #header_content p {
+        left: 24px;
+        margin-left: 0;
+        width: auto;
+    }
+
+    #content {
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        margin-left: 0;
+        width: auto;
+    }
+    section {
+        width: 100%;
+        float: left;
+        clear: both;
+    }
+}
+
+
+
 body {
-    font-family: "Cambria","Georgia","Times New Roman", serif; 
+    font-family: "Arial Black", Gadget, sans-serif;
     margin: 1em 2em 1em 2em; 
     font-size: 100%; 
     line-height: 130%;
     background-color: #161917;
     color: #dee5e5;
     min-width: 600px;
+    -webkit-text-size-adjust: 100%;
 }
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Cambria","Georgia","Times New Roman", serif; 
+    font-family: "Arial Black", Gadget, sans-serif;
     font-weight: bold; 
     line-height:100%; 
     margin-top: 1.5em; 
