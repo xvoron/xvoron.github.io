@@ -1,3 +1,68 @@
+#header_logo:hover {
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+#header_logo:before,
+#header_logo:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+#header_logo:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+#header_logo:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
+
+
+
+hr {
+    width: 50%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -54,6 +119,10 @@ section h2 {
     height: 30px;
 }
 
+#content a {
+    text-decoration: none;
+}
+
 @media only screen and (max-width: 578px) {
     header {
         position: static;
@@ -102,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Arial Black", Gadget, sans-serif;
     font-weight: bold; 
     line-height:100%; 
-    margin-top: 1.5em; 
+    margin-top: 1em; 
     margin-bottom: 0.5em;
 }
 h1 {font-size: 2.6em; color: #a6aaac;}
@@ -111,7 +180,7 @@ h3 {font-size: 1.8em; color: #6d7275;}
 h4 {font-size: 1.4em; color: #575b5f;}
 h5 {font-size: 1.3em; color: #7f1012;}
 h6 {font-size: 1.2em; color: #68090b;}
-p, pre, blockquote, table, ul, ol, dl {margin-top: 1em; margin-bottom: 1em;}
+p, pre, blockquote, table, ul, ol, dl {margin-top: 0.5em; margin-bottom: 0.5em;}
 ul ul, ul ol, ol ol, ol ul {margin-top: 0.5em; margin-bottom: 0.5em;}
 li {margin: 0.3em auto;}
 ul {margin-left: 2em; padding-left: 0.5em;}
@@ -121,7 +190,7 @@ pre {border-left: none; margin-left: none; padding-left: 0.5em;}
 blockquote {padding: 0.4em; background-color: #f6f5eb;}
 th, td {border: 1px solid #ccc; padding: 0.3em;}
 th {background-color: #f0f0f0;}
-hr {border: none; border-top: 1px solid #ccc; width: 100%;}
+hr {border: none; border-top: 1px solid #ccc; width: 50%;}
 del {text-decoration: line-through; color: #777777;}
 .toc li {list-style-type: none;}
 .todo {font-weight: bold; background-color: #f0ece8; color: #a03020;}
