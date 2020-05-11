@@ -1,4 +1,28 @@
+.filter-red {
+    filter: invert(13%) sepia(59%) saturate(4626%) hue-rotate(346deg) brightness(112%) contrast(92%);
+}
 
+.filter-grey {
+    filter: invert(62%) sepia(5%) saturate(288%) hue-rotate(159deg) brightness(90%) contrast(86%);
+}
+
+#contact_links {
+  padding-top: 12px;
+}
+
+
+#contact_links {
+  /* display: inline-block;
+  margin-right: 5px;
+  width: 25px;
+  height: 19px;
+  */
+  cursor: pointer;
+  text-decoration: none;
+}
+#contact_links a {
+    text-decoration: none;
+}
 
 
 hr {
@@ -37,6 +61,10 @@ header {
 
 #header_content {
     text-align: center;
+}
+
+#header_content h1{
+    margin: 0;
 }
 
 #header_logo {
@@ -132,13 +160,13 @@ section h2 {
 
 @keyframes glitchTop{
   2%,64%{
-    transform: translate(2px,-2px);
+    transform: translate(30px,-30px);
   }
   4%,60%{
-    transform: translate(-2px,2px);
+    transform: translate(-30px,30px);
   }
   62%{
-    transform: translate(13px,-1px) skew(-13deg); 
+    transform: translate(50px,-10px) skew(-25deg); 
   }
 }
 
@@ -150,15 +178,16 @@ section h2 {
 
 @keyframes glitchBotom{
   2%,64%{
-    transform: translate(-2px,0);
+    transform: translate(-20px,0);
   }
   4%,60%{
-    transform: translate(-2px,0);
+    transform: translate(-20px,0);
   }
   62%{
-    transform: translate(-22px,5px) skew(21deg); 
+    transform: translate(-220px,50px) skew(21deg); 
   }
 }
+
 
 body {
     font-family: "Arial Black", Gadget, sans-serif;
