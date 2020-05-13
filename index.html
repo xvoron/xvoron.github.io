@@ -4,8 +4,6 @@
         <link rel="Stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-        <script src="scale.fix.js"></script>
-
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=100%,
         user-scalable=yes, maximum-scale=1">
@@ -21,9 +19,20 @@
                 <div id="header_logo">
                     <a href="about_me/about_me.html">
                         <img src="img/face_croped.png" alt="HTML5
-                        Icon" width="128" height="128">
+                        Icon" width="128" height="128"
+                                          onmouseover="hover(this);"
+                                          onmouseout="unhover(this);">
                     </a>
                 </div>
+                <script>
+                    function hover(element) {
+                      element.setAttribute('src', 'img/face_angry_croped.png');
+                    }
+
+                    function unhover(element) {
+                      element.setAttribute('src', 'img/face_croped.png');
+                    }
+                </script>
 
                 <h1>ARTYOM<br>VORONIN</h1>
 
@@ -60,16 +69,32 @@
                 
 
 
-<div id="News"><h1 id="News" class="header"><a href="#News">News</a></h1></div>
-
-<div id="[[blog/blog|Blog]]"><h1 id="[[blog/blog|Blog]]" class="header"><a href="#[[blog/blog|Blog]]"><a href="blog/blog.html">Blog</a></a></h1></div>
-
-<div id="[[blog/blog|Blog]]-[[blog/first_blog|My first blog]] <br>"><h5 id="[[blog/first_blog|My first blog]] <br>" class="header"><a href="#[[blog/blog|Blog]]-[[blog/first_blog|My first blog]] <br>"><a href="blog/first_blog.html">My first blog</a> <br></a></h5></div>
+<div id="NEWS"><h1 id="NEWS" class="header"><a href="#NEWS">NEWS</a></h1></div>
 <p>
-This blog is about bla bla 
+Welcome to my website/blog!
 </p>
 
-<div id="[[projects/projects|Projects]]"><h1 id="[[projects/projects|Projects]]" class="header"><a href="#[[projects/projects|Projects]]"><a href="projects/projects.html">Projects</a></a></h1></div>
+<div id="[[blog/blog|BLOG]]"><h1 id="[[blog/blog|BLOG]]" class="header"><a href="#[[blog/blog|BLOG]]"><a href="blog/blog.html">BLOG</a></a></h1></div>
+
+<div id="[[blog/blog|BLOG]]-[[blog/VimWiki|VimWiki]]"><h5 id="[[blog/VimWiki|VimWiki]]" class="header"><a href="#[[blog/blog|BLOG]]-[[blog/VimWiki|VimWiki]]"><a href="blog/VimWiki.html">VimWiki</a></a></h5></div>
+<p>
+VimWiki is a powerful vim plugin that provides you to create you local wiki
+structure.
+</p>
+
+<div id="[[projects/projects|PROJECTS]]"><h1 id="[[projects/projects|PROJECTS]]" class="header"><a href="#[[projects/projects|PROJECTS]]"><a href="projects/projects.html">PROJECTS</a></a></h1></div>
+
+<div id="[[projects/projects|PROJECTS]]-[[projects/deep_q_learning/car_sim|Deep Q-learning agent for 2D car simulator]]"><h5 id="[[projects/deep_q_learning/car_sim|Deep Q-learning agent for 2D car simulator]]" class="header"><a href="#[[projects/projects|PROJECTS]]-[[projects/deep_q_learning/car_sim|Deep Q-learning agent for 2D car simulator]]"><a href="projects/deep_q_learning/car_sim.html">Deep Q-learning agent for 2D car simulator</a></a></h5></div>
+<p>
+This project is my attempt to learn Pygames library and to understand basics of
+Deep Q-learning algorithm. 
+</p>
+
+<div id="[[about_me/about_me|ABOUT ME]]"><h1 id="[[about_me/about_me|ABOUT ME]]" class="header"><a href="#[[about_me/about_me|ABOUT ME]]"><a href="about_me/about_me.html">ABOUT ME</a></a></h1></div>
+<p>
+I'm Artyom Voronin. My specialization is Mechatronics. Mostly time in
+programming in Python.
+</p>
 
         </div>
 

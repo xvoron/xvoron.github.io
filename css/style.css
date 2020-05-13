@@ -71,6 +71,7 @@ header {
     text-align: center;
 }
 
+
 a {
     color: #b61f24;
 }
@@ -79,6 +80,7 @@ a {
     position: absolute;
     left: 50%;
     width: 50%;
+    max-width: 600px;
 }
 
 section {
@@ -123,15 +125,16 @@ section h2 {
         clear: both;
     }
 
-    #header_logo {
+    /*#header_logo {
       animation: glitch 1s linear infinite;
-    }
+    }*/
 }
 
 
-#header_logo:hover {
+/* #header_logo:hover {
   animation: glitch 1s linear infinite;
 }
+*/
 
 @keyframes glitch{
   2%,64%{
@@ -207,6 +210,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1em; 
     margin-bottom: 0.5em;
 }
+table th, td {
+    background-color: #161917;
+}
 h1 {font-size: 2.6em; color: #a6aaac;}
 h2 {font-size: 2.2em; color: #898e91;}
 h3 {font-size: 1.8em; color: #6d7275;}
@@ -223,7 +229,7 @@ pre {border-left: none; margin-left: none; padding-left: 0.5em;}
 blockquote {padding: 0.4em; background-color: #f6f5eb;}
 th, td {border: 1px solid #ccc; padding: 0.3em;}
 th {background-color: #f0f0f0;}
-hr {border: none; border-top: 1px solid #ccc; width: 50%;}
+hr {border: none; border-top: 1px solid #ccc; width: 100%;}
 del {text-decoration: line-through; color: #777777;}
 .toc li {list-style-type: none;}
 .todo {font-weight: bold; background-color: #f0ece8; color: #a03020;}

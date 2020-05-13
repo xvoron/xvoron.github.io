@@ -4,8 +4,6 @@
         <link rel="Stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-        <script src="scale.fix.js"></script>
-
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=100%,
         user-scalable=yes, maximum-scale=1">
@@ -21,9 +19,20 @@
                 <div id="header_logo">
                     <a href="../about_me/about_me.html">
                         <img src="../img/face_croped.png" alt="HTML5
-                        Icon" width="128" height="128">
+                        Icon" width="128" height="128"
+                                          onmouseover="hover(this);"
+                                          onmouseout="unhover(this);">
                     </a>
                 </div>
+                <script>
+                    function hover(element) {
+                      element.setAttribute('src', '../img/face_angry_croped.png');
+                    }
+
+                    function unhover(element) {
+                      element.setAttribute('src', '../img/face_croped.png');
+                    }
+                </script>
 
                 <h1>ARTYOM<br>VORONIN</h1>
 
@@ -58,6 +67,15 @@
 
         <div id="content">
                 
+<div id="PROJECTS"><h1 id="PROJECTS" class="header"><a href="#PROJECTS">PROJECTS</a></h1></div>
+
+<hr />
+<div id="PROJECTS-[[deep_q_learning/car_sim|Deep Q-learning for car 2D simulator]]"><h5 id="[[deep_q_learning/car_sim|Deep Q-learning for car 2D simulator]]" class="header"><a href="#PROJECTS-[[deep_q_learning/car_sim|Deep Q-learning for car 2D simulator]]"><a href="deep_q_learning/car_sim.html">Deep Q-learning for car 2D simulator</a></a></h5></div>
+<p>
+This project is my attempt to learn pyGames library and to understand basics of
+Deep Q-learning algorithm. 
+<hr />
+</p>
 
         </div>
 

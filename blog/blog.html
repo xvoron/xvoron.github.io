@@ -4,8 +4,6 @@
         <link rel="Stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-        <script src="scale.fix.js"></script>
-
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=100%,
         user-scalable=yes, maximum-scale=1">
@@ -21,9 +19,20 @@
                 <div id="header_logo">
                     <a href="../about_me/about_me.html">
                         <img src="../img/face_croped.png" alt="HTML5
-                        Icon" width="128" height="128">
+                        Icon" width="128" height="128"
+                                          onmouseover="hover(this);"
+                                          onmouseout="unhover(this);">
                     </a>
                 </div>
+                <script>
+                    function hover(element) {
+                      element.setAttribute('src', '../img/face_angry_croped.png');
+                    }
+
+                    function unhover(element) {
+                      element.setAttribute('src', '../img/face_croped.png');
+                    }
+                </script>
 
                 <h1>ARTYOM<br>VORONIN</h1>
 
@@ -59,9 +68,14 @@
         <div id="content">
                 
 
-<div id="Blog"><h1 id="Blog" class="header"><a href="#Blog">Blog</a></h1></div>
-
-<div id="Blog-[[first_blog]]"><h2 id="[[first_blog]]" class="header"><a href="#Blog-[[first_blog]]"><a href="first_blog.html">first_blog</a></a></h2></div>
+<div id="BLOG"><h1 id="BLOG" class="header"><a href="#BLOG">BLOG</a></h1></div>
+<hr />
+<div id="BLOG-[[VimWiki]]"><h5 id="[[VimWiki]]" class="header"><a href="#BLOG-[[VimWiki]]"><a href="VimWiki.html">VimWiki</a></a></h5></div>
+<p>
+VimWiki is a poverfull vim plugim that provides you to create you local wiki
+structure.
+<hr />
+</p>
 
         </div>
 
