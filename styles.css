@@ -1,0 +1,124 @@
+/* Base styles and variables */
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #4a4a4a;
+    --background-color: #ffffff;
+    --accent-color: #333;
+    --spacing: 0.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Mono', 'Fira Code', Consolas, monospace;
+    line-height: 1.5;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    margin: 0 auto;
+    max-width: 800px;   /* Limit content width */
+    padding: 0 1rem;    /* Horizontal padding for left and right */
+}
+
+/* A container to center page content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Navigation */
+.navbar {
+    padding: var(--spacing) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 1rem;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+.nav-links a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Make the navigation horizontal */
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-right: 1rem; /* Space between links */
+}
+
+nav a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set link color to black */
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--primary-color); /* Change color on hover */
+}
+
+/* Main content */
+main {
+    margin: 2rem 0;
+}
+
+/* Headings and text */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+p,
+ul,
+ol {
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: var(--spacing);
+    color: var(--secondary-color);
+    border-top: 1px solid #eee;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 0 2rem;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        margin-top: 0.5rem;
+    }
+}

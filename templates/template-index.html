@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>$title$</title>
+$if(stylesheets)$
+$for(stylesheets)$
+<link rel="stylesheet" href="$stylesheets$">
+$endfor$
+$endif$
+$if(mathjax)$
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+$endif$
+</head>
+<body>
+    $body$
+</body>
+</html>
