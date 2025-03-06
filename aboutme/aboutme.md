@@ -1,12 +1,12 @@
 ---
-title: I
+title: I am
 stylesheets:
     - ../styles.css
 ---
 <nav>
   <ul>
     <li><a href="../index.html">home</a></li>
-    <li><a href="../blogs/blogs.html">blogs</a></li>
+    <li><a href="../posts/posts.html">posts</a></li>
     <li><a href="aboutme.html">aboutme</a></li>
   </ul>
 </nav>

@@ -1,124 +1,172 @@
-/* Base styles and variables */
+/* ========================================================================
+   Minimalistic & Responsive CSS for a Technical Website
+   ------------------------------------------------------------------------
+   This CSS file is designed with minimalism in mind and a responsive 
+   layout that works on both desktop and mobile devices. It uses a set of
+   CSS variables for a consistent color palette, centers content, and 
+   ensures that text and clickable elements are legible and accessible.
+   ======================================================================== */
+
+/* ------------------------------------------------------------------------
+   Color Palette:
+   Define theme colors using CSS variables. Adjust these to customize your 
+   color scheme.
+   ------------------------------------------------------------------------ */
 :root {
-    --primary-color: #1a1a1a;
-    --secondary-color: #4a4a4a;
-    --background-color: #ffffff;
-    --accent-color: #333;
-    --spacing: 0.5rem;
+  --seasalt: #f8f9faff;
+  --antiflash-white: #e9ecefff;
+  --platinum: #dee2e6ff;
+  --french-gray: #ced4daff;
+  --french-gray-2: #adb5bdff;
+  --slate-gray: #6c757dff;
+  --outer-space: #495057ff;
+  --onyx: #343a40ff;
+  --eerie-black: #212529ff;
 }
 
+/* ------------------------------------------------------------------------
+   Global Reset & Box Sizing
+   Remove default margins/paddings for consistency across browsers.
+   ------------------------------------------------------------------------ */
 * {
-    margin: 0;
-    padding: 0 0.5rem;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* ------------------------------------------------------------------------
+   Base Body Styles
+   Centers content by limiting max-width and adding padding. Sets the 
+   base font properties.
+   ------------------------------------------------------------------------ */
 body {
-    font-family: 'IBM Plex Mono', 'Fira Code', Consolas, monospace;
-    line-height: 1.5;
-    color: var(--primary-color);
-    background-color: var(--background-color);
-    margin: 0 auto;
-    max-width: 800px;   /* Limit content width */
-    padding: 0 1rem;    /* Horizontal padding for left and right */
+  background-color: var(--seasalt); /* Light background */
+  color: var(--onyx); /* Dark text for readability */
+  font-family: 'IBM Plex Mono', 'Fira Code', Consolas, monospace;
+  line-height: 1.6;
+  font-size: 16px; /* Base font size for desktop */
+  
+  /* Center content with a max width and add spacing from edges */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-/* A container to center page content */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1rem;
+/* ------------------------------------------------------------------------
+   Navigation Bar Styling
+   The nav bar is centered with a horizontal layout. Increased padding
+   ensures that the buttons are easy to tap on mobile devices.
+   ------------------------------------------------------------------------ */
+nav {
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem; /* Spacing below navigation */
 }
 
-/* Navigation */
-.navbar {
-    padding: var(--spacing) 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-brand {
-    font-size: 1rem;
-    font-weight: normal;
-    letter-spacing: 0.5px;
-}
-
-.nav-links a {
-    margin-left: 1rem;
-    text-decoration: none;
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-    transition: color 0.2s;
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
-}
-
+/* Remove list styles and use inline-block to shrink-wrap the list */
 nav ul {
-    list-style: none; /* Remove bullet points */
-    display: flex; /* Make the navigation horizontal */
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  display: inline-block;
 }
 
+/* Inline display for navigation items with spacing */
 nav li {
-    margin-right: 1rem; /* Space between links */
+  display: inline;
+  margin: 0 1rem;
 }
 
+/* Navigation link styling with increased padding for better touch targets */
 nav a {
-    text-decoration: none; /* Remove underline */
-    color: black; /* Set link color to black */
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-    transition: color 0.2s;
+  text-decoration: none; /* No underline */
+  color: var(--onyx);
+  transition: color 0.3s ease;
+  padding: 0.5rem 0.75rem; /* Increases clickable area */
+  font-size: 1rem; /* Ensure legibility */
 }
 
+/* Hover effect: change color without underlining */
 nav a:hover {
-    color: var(--primary-color); /* Change color on hover */
+  color: var(--slate-gray);
 }
 
-/* Main content */
-main {
-    margin: 2rem 0;
+/* ------------------------------------------------------------------------
+   Heading & Paragraph Styling
+   Center headings and paragraphs, with spacing for readability.
+   ------------------------------------------------------------------------ */
+h1, h3 {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: var(--outer-space);
 }
 
-/* Headings and text */
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+/* Optional: More specific heading adjustments if needed */
+h1#me {
+  margin-top: 2rem;
 }
 
-h2 {
-    margin-bottom: 1rem;
+/* Paragraphs are limited in width and centered */
+p {
+  max-width: 800px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  color: var(--onyx);
 }
 
-p,
-ul,
-ol {
-    margin-bottom: 1rem;
+/* ------------------------------------------------------------------------
+   General Link Styling
+   Style in-content links with a smooth color transition.
+   ------------------------------------------------------------------------ */
+a {
+  color: var(--slate-gray);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: var(--spacing);
-    color: var(--secondary-color);
-    border-top: 1px solid #eee;
+/* Hover effect for content links */
+a:hover {
+  color: var(--outer-space);
 }
 
-/* Responsive design */
+/* ------------------------------------------------------------------------
+   List Styling for Content
+   Adds indentation and spacing for list elements.
+   ------------------------------------------------------------------------ */
+ul {
+  margin: 1rem auto;
+  padding-left: 1.5rem; /* Indent list items for clarity */
+}
+
+/* ------------------------------------------------------------------------
+   Responsive Design Adjustments for Mobile Devices
+   These media queries increase font sizes and spacing on smaller screens,
+   ensuring that text is legible and interactive elements are easy to tap.
+   ------------------------------------------------------------------------ */
 @media (max-width: 600px) {
-    body {
-        padding: 0 2rem;
-    }
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .nav-links {
-        margin-top: 0.5rem;
-    }
+  body {
+    font-size: 18px; /* Increase base font size for better legibility */
+    padding: 1rem; /* Maintain adequate padding on small screens */
+  }
+  
+  /* Adjust nav items for a larger touch area */
+  nav li {
+    margin: 0 0.5rem;
+  }
+  
+  nav a {
+    padding: 0.75rem 1rem; /* Increase clickable area */
+    font-size: 1.1rem; /* Slightly larger text for navigation links */
+  }
+  
+  p {
+    padding: 0 0.5rem;
+  }
+  
+  /* Ensure headings are prominent on mobile */
+  h1, h3 {
+    font-size: 1.5rem;
+  }
 }
+
+/* ========================================================================
+   End of styles.css
+   ======================================================================== */

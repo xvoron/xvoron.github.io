@@ -12,9 +12,9 @@ index.html: index.md
 	@echo "Converting index.md to index.html"
 	@cat $< | $(SED_PIPE) | pandoc --standalone --template=templates/template-index.html --mathjax -o $@ -
 
-blogs/%.html: blogs/%.md
+posts/%.html: posts/%.md
 	@echo "Converting $< to $@"
-	@cat $< | $(SED_PIPE) | pandoc --standalone --template=templates/template-blogs.html --mathjax -o $@ -
+	@cat $< | $(SED_PIPE) | pandoc --standalone --template=templates/template-posts.html --mathjax -o $@ -
 
 aboutme/%.html: aboutme/%.md
 	@echo "Converting $< to $@"
