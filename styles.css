@@ -58,7 +58,7 @@ body {
    ensures that the buttons are easy to tap on mobile devices.
    ------------------------------------------------------------------------ */
 nav {
-  padding: 1rem;
+  padding: 0.1rem;
   text-align: center;
   margin-bottom: 1.5rem; /* Spacing below navigation */
 }
@@ -72,7 +72,7 @@ nav ul {
 /* Inline display for navigation items with spacing */
 nav li {
   display: inline;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
 }
 
 /* Navigation link styling with increased padding for better touch targets */
@@ -80,8 +80,8 @@ nav a {
   text-decoration: none; /* No underline */
   color: var(--onyx);
   transition: color 0.3s ease;
-  padding: 0.5rem 0.75rem; /* Increases clickable area */
-  font-size: 1rem; /* Ensure legibility */
+  padding: 0.75rem 0.75rem; /* Increases clickable area */
+  font-size: 1.2rem; /* Ensure legibility */
 }
 
 /* Hover effect: change color without underlining */
@@ -149,12 +149,12 @@ ul {
   
   /* Adjust nav items for a larger touch area */
   nav li {
-    margin: 0 0.5rem;
+    margin: 0 0.2rem;
   }
   
   nav a {
     padding: 0.75rem 1rem; /* Increase clickable area */
-    font-size: 1.1rem; /* Slightly larger text for navigation links */
+    font-size: 1.2rem; /* Slightly larger text for navigation links */
   }
   
   p {
