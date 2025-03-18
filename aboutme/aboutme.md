@@ -13,6 +13,6 @@ stylesheets:
 
 # me
 
-I am a person. Currently I working in [seznam.cz](seznam.cz) on some search engine research related
+I am a person. Currently I working in [seznam.cz](https://seznam.cz) on some search engine research related
 projects. Projects are mostly about lm and llm models training and evaluation. So there is a lot of
 work with data and machine learning (ai) algorithms.
