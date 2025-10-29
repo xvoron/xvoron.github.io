@@ -13,6 +13,7 @@ stylesheets:
 
 # me
 
-I am a person. Currently I working in [seznam.cz](https://seznam.cz) on some search engine research related
-projects. Projects are mostly about lm and llm models training and evaluation. So there is a lot of
-work with data and machine learning (ai) algorithms.
+I am an individual presently employed at [seznam.cz](https://seznam.cz), where I am engaged in
+research-related projects concerning search engines. My work primarily revolves around the training
+and evaluation of LMs and LLMs models, necessitating extensive interaction with data and the
+implementation of machine learning algorithms.
